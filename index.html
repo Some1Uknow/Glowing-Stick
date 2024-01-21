@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Color Changing Stick</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container"><div class="color-stick">
+  </div>
+</div>
+  <div class="color-buttons">
+    <button class="color-button" 
+    onclick="changeColor('#3498db')"></button>
+    <button class="color-button" 
+    onclick="changeColor('#e74c3c')"></button>
+    <button class="color-button"
+    onclick="changeColor('#2ecc71')"></button>
+    <button class="color-button" 
+    onclick="changeColor('#f39c12')"></button>
+  </div>
+  <script>
+  function changeColor(color) {
+    var stick = document.querySelector('.color-stick');
+    stick.style.backgroundColor = color;
+    stick.classList.add('glowing');
+      setTimeout(function() {
+      stick.classList.remove('glowing');
+    }, 300);
+  }
+  </script>
+</body>
+</html>
